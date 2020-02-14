@@ -102,7 +102,7 @@ class AIXMFormat:
                         airspace['parts'].append(f'V X={center_lat} {center_lon}\nDB {start_lat} {start_lon}, {stop_lat} {stop_lon}')
                 else:
                     logging.warning(f'Unknown geometry bound : {part_type}.')
-            if len(airspace['parts']) > 2 or (len(airspace['parts']) == 1 and ('DC' in airspace['parts'][0])):
+            if len(airspace['parts']) > 2 or ((len(airspace['parts']) == 1) and ('DC' in airspace['parts'][0])):
                 self.airspaces.append(airspace)
             else:
                 logging.warning(f'Airspace {airspace_id} will not be converted.')
