@@ -2,11 +2,11 @@ import json
 import os
 from datetime import datetime, time
 
-from igclib.constants import (IGCLIB_ESS, IGCLIB_GOAL, IGCLIB_SSS, IGCLIB_TAKEOFF, IGCLIB_TURNPOINT_ALT, IGCLIB_TURNPOINT_LAT, IGCLIB_TURNPOINT_LON, IGCLIB_TURNPOINT_RADIUS, IGCLIB_TURNPOINT_ROLE, IGCLIB_TURNPOINTS, PWCA_DETAILS, PWCA_ID, PWCA_OPEN, PWCA_START, PWCA_STOP, PWCA_TASK, PWCA_TASK_DATE,
+from pygclib.constants import (pygclib_ESS, pygclib_GOAL, pygclib_SSS, pygclib_TAKEOFF, pygclib_TURNPOINT_ALT, pygclib_TURNPOINT_LAT, pygclib_TURNPOINT_LON, pygclib_TURNPOINT_RADIUS, pygclib_TURNPOINT_ROLE, pygclib_TURNPOINTS, PWCA_DETAILS, PWCA_ID, PWCA_OPEN, PWCA_START, PWCA_STOP, PWCA_TASK, PWCA_TASK_DATE,
                               PWCA_TIME_FORMAT, PWCA_TURNPOINT, PWCA_TURNPOINT_NAME, PWCA_TURNPOINT_RADIUS, PWCA_TURNPOINTS, PWCA_TYPE, XC_GOAL, XC_GOAL_DEADLINE, XC_SSS, XC_SSS_TIMEGATES, XC_TIME_FORMAT, XC_TURNPOINTS, XC_TURNPOINTS_RADIUS, XC_TYPE, XC_WAYPOINT, XC_WAYPOINT_ALT, XC_WAYPOINT_DESC,
                               XC_WAYPOINT_LAT, XC_WAYPOINT_LON, XC_WAYPOINT_NAME)
-from igclib.geography.geo import Turnpoint
-from igclib.time.timeop import add_offset
+from pygclib.geography.geo import Turnpoint
+from pygclib.time.timeop import add_offset
 
 
 class PWCATask():
@@ -95,22 +95,22 @@ class XCTask():
         )
 
 
-class IGCLIBTask():
+class pygclibTask():
 
     def __init__(self, task):
         #open_time = datetime.strptime(task[PWCA_DETAILS][PWCA_OPEN], PWCA_TIME_FORMAT)
         #start_time = datetime.strptime(task[PWCA_DETAILS][PWCA_START], PWCA_TIME_FORMAT)
         #stop_time = datetime.strptime(task[PWCA_DETAILS][PWCA_STOP], PWCA_TIME_FORMAT)
 
-        self.takeoff = self.build_wpt(task[IGCLIB_TAKEOFF])
-        self.sss = self.build_wpt(task[IGCLIB_SSS])
-        self.ess = self.build_wpt(task[IGCLIB_ESS])
+        self.takeoff = self.build_wpt(task[pygclib_TAKEOFF])
+        self.sss = self.build_wpt(task[pygclib_SSS])
+        self.ess = self.build_wpt(task[pygclib_ESS])
 
         self.turnpoints = []
-        for waypoint in task[IGCLIB_TURNPOINTS]:
+        for waypoint in task[pygclib_TURNPOINTS]:
             self.turnpoints.append(self.build_wpt(waypoint))
 
-        self.date = task.get(IGCLIB_DATE, None).strip()
+        self.date = task.get(pygclib_DATE, None).strip()
         self.open = time(open_time.hour, open_time.minute, open_time.second)
         self.start = time(start_time.hour, start_time.minute, start_time.second)
         self.stop = time(stop_time.hour, stop_time.minute, stop_time.second)
@@ -119,13 +119,13 @@ class IGCLIBTask():
     @staticmethod
     def build_wpt(wpt):
         return Turnpoint(
-            lat=wpt[IGCLIB_TURNPOINT_LAT],
-            lon=wpt[IGCLIB_TURNPOINT_LON],
-            radius=wpt[IGCLIB_TURNPOINT_RADIUS],
-            altitude=wpt[IGCLIB_TURNPOINT_ALT],
-            name=wpt[IGCLIB_TURNPOINT_NAME],
-            desc=wpt[IGCLIB_TURNPOINT_DESC],
-            role=wpt[IGCLIB_TURNPOINT_ROLE],
+            lat=wpt[pygclib_TURNPOINT_LAT],
+            lon=wpt[pygclib_TURNPOINT_LON],
+            radius=wpt[pygclib_TURNPOINT_RADIUS],
+            altitude=wpt[pygclib_TURNPOINT_ALT],
+            name=wpt[pygclib_TURNPOINT_NAME],
+            desc=wpt[pygclib_TURNPOINT_DESC],
+            role=wpt[pygclib_TURNPOINT_ROLE],
         )
 
 
@@ -142,7 +142,7 @@ class RawTask():
     @staticmethod
     def build_wpt(wpt):
         return Turnpoint(
-            lat=float(wpt[IGCLIB_TURNPOINT_LAT]),
-            lon=float(wpt[IGCLIB_TURNPOINT_LON]),
-            radius=float(wpt[IGCLIB_TURNPOINT_RADIUS]),
+            lat=float(wpt[pygclib_TURNPOINT_LAT]),
+            lon=float(wpt[pygclib_TURNPOINT_LON]),
+            radius=float(wpt[pygclib_TURNPOINT_RADIUS]),
         )

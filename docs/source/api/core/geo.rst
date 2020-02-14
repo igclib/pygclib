@@ -1,4 +1,4 @@
 Geography
 ----------
-.. automodule:: igclib.geography
+.. automodule:: pygclib.geography
     :members:

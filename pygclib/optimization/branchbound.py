@@ -1,8 +1,8 @@
 # Algorithm designed by Ondrej Palkovsky - http://www.penguin.cz/~ondrap/algorithm.pdf
 from itertools import combinations
 
-from igclib.core import BaseObject
-from igclib.geography import distance
+from pygclib.core import BaseObject
+from pygclib.geography import distance
 from sortedcontainers import SortedList  # maybe heapq is a better idea ?
 
 

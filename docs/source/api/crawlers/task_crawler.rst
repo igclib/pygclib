@@ -1,4 +1,4 @@
 Crawlers
 -----------------
-.. automodule:: igclib.crawlers
+.. automodule:: pygclib.crawlers
    :members:

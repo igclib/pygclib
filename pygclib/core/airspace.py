@@ -1,8 +1,8 @@
 import logging
 
-from igclib.geography import destination
-from igclib.geography.converters import parse_altitude
-from igclib.geography.geo import Arc
+from pygclib.geography import destination
+from pygclib.geography.converters import parse_altitude
+from pygclib.geography.geo import Arc
 from shapely.geometry import Polygon
 
 NORTH = 0

@@ -2,8 +2,8 @@ import os
 from datetime import time
 
 import pytest
-from igclib.core.task import Task
-from igclib.tests import TEST_DATA
+from pygclib.core.task import Task
+from pygclib.tests import TEST_DATA
 
 APPROX = 0.005
 

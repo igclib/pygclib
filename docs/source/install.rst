@@ -8,6 +8,6 @@ This package will be hosted on PyPI when it reaches its beta version. For the mo
 
 ::
 
-    git clone https://github.com/teobouvard/igclib.git
-    cd igclib
+    git clone https://github.com/teobouvard/pygclib.git
+    cd pygclib
     make install

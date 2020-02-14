@@ -1,4 +1,4 @@
-from igclib.converters.formats import AIXMFormat
+from pygclib.converters.formats import AIXMFormat
 
 
 class Converter:

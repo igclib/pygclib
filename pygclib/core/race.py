@@ -11,14 +11,14 @@ from collections import defaultdict
 
 import numpy as np
 #import seaborn as sns
-from igclib.core import BaseObject
-from igclib.serialization.json_encoder import ComplexEncoder
-from igclib.core.flight import Flight
-from igclib.core.pilot_features import PilotFeatures
-from igclib.core.ranking import Ranking
-from igclib.core.task import Task
-from igclib.crawlers.flight_crawler import FlightCrawler
-from igclib.time.timeop import sub_times
+from pygclib.core import BaseObject
+from pygclib.serialization.json_encoder import ComplexEncoder
+from pygclib.core.flight import Flight
+from pygclib.core.pilot_features import PilotFeatures
+from pygclib.core.ranking import Ranking
+from pygclib.core.task import Task
+from pygclib.crawlers.flight_crawler import FlightCrawler
+from pygclib.time.timeop import sub_times
 from scipy.signal import savgol_filter
 from tqdm import tqdm
 

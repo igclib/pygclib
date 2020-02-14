@@ -4,9 +4,9 @@ from datetime import time
 from functools import lru_cache
 
 from aerofiles import igc
-from igclib.constants import (IGC_HEADER, IGC_PILOT_NAME, IGC_RECORDS, IGC_TIME, IGC_TZ_OFFSET)
-from igclib.geography.geo import GeoPoint
-from igclib.time.timeop import add_offset
+from pygclib.constants import (IGC_HEADER, IGC_PILOT_NAME, IGC_RECORDS, IGC_TIME, IGC_TZ_OFFSET)
+from pygclib.geography.geo import GeoPoint
+from pygclib.time.timeop import add_offset
 
 
 class Flight():

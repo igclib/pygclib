@@ -1,80 +1,124 @@
 {
-    "version": "0.2.0",
-    "configurations": [
-
-
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "(gdb) Launch",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/pygclib/c_ext/c_dev",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "setupCommands": [
         {
-            "name": "(gdb) Launch",
-            "type": "cppdbg",
-            "request": "launch",
-            "program": "${workspaceFolder}/igclib/c_ext/c_dev",
-            "args": [],
-            "stopAtEntry": false,
-            "cwd": "${workspaceFolder}",
-            "environment": [],
-            "externalConsole": false,
-            "MIMode": "gdb",
-            "setupCommands": [
-                {
-                    "description": "Enable pretty-printing for gdb",
-                    "text": "-enable-pretty-printing",
-                    "ignoreFailures": true
-                }
-            ]
-        },
-        {
-            "name": "dev",
-            "type": "python",
-            "request": "launch",
-            "program": "${workspaceFolder}/igclib/bin/igclib",
-            "args": ["optimize", "--task", "igclib/tests/test_data/tasks/pwca_brazil_2019_7.json"],
-            "console": "integratedTerminal"
-        },
-        {
-            "name": "race",
-            "type": "python",
-            "request": "launch",
-            "program": "${workspaceFolder}/igclib/bin/igclib",
-            "args": ["race", "--task", "igclib/tests/test_data/tasks/pwca_brazil_2019_7.json", "--flights", "igclib/tests/test_data/tracks/pwca_brazil_2019_7_few_tracks.zip", "--output", "saved_races/small_race.json"],
-            "console": "integratedTerminal"
-        },
-        {
-            "name": "watch",
-            "type": "python",
-            "request": "launch",
-            "program": "${workspaceFolder}/igclib/bin/igclib",
-            "args": ["watch", "--path", "saved_races/race.pkl", "--pilot", "0349", "--output", "saved_races/xc_flight.json", "--progress", "ratio", "--sparse", "1000"],
-            "console": "integratedTerminal"
-        },
-        {
-            "name": "xc",
-            "type": "python",
-            "request": "launch",
-            "program": "${workspaceFolder}/igclib/bin/igclib",
-            "args": ["xc", "--flight", "igclib/tests/test_data/tracks/xc_col_agnel.igc", "--airspace", "igclib/tests/test_data/airspace/france_airspace.txt", "--output", "saved_races/xc_flight.json"],
-            "console": "integratedTerminal"
-        },
-        {
-            "name": "json race",
-            "type": "python",
-            "request": "launch",
-            "program": "${workspaceFolder}/igclib/bin/igclib",
-            "args": ["race", "--task", "igclib/tests/test_data/tasks/pwca_task.json"],
-            "console": "integratedTerminal"
-        },
-        {
-            "name": "convert aixm openair",
-            "type": "python",
-            "request": "launch",
-            "program": "${workspaceFolder}/igclib/bin/igclib",
-            "args": ["convert", "--from_format", "aixm", "--to_format", "openair", "--input_file", "dev_files/airspace_aixm.xml", "--output_file", "dev_files/airspace_openair.txt"],
-            "console": "integratedTerminal"
-        },
-        {
-            "type": "python",
-            "request": "launch",
-            "name": "current",
-            "program": "${file}"
-          }
-    ]
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
+    },
+    {
+      "name": "dev",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}/pygclib/bin/pygclib",
+      "args": [
+        "optimize",
+        "--task",
+        "pygclib/tests/test_data/tasks/pwca_brazil_2019_7.json"
+      ],
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "race",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}/pygclib/bin/pygclib",
+      "args": [
+        "race",
+        "--task",
+        "pygclib/tests/test_data/tasks/pwca_brazil_2019_7.json",
+        "--flights",
+        "pygclib/tests/test_data/tracks/pwca_brazil_2019_7_few_tracks.zip",
+        "--output",
+        "saved_races/small_race.json"
+      ],
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "watch",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}/pygclib/bin/pygclib",
+      "args": [
+        "watch",
+        "--path",
+        "saved_races/race.pkl",
+        "--pilot",
+        "0349",
+        "--output",
+        "saved_races/xc_flight.json",
+        "--progress",
+        "ratio",
+        "--sparse",
+        "1000"
+      ],
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "xc",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}/pygclib/bin/pygclib",
+      "args": [
+        "xc",
+        "--flight",
+        "pygclib/tests/test_data/tracks/xc_col_agnel.igc",
+        "--airspace",
+        "pygclib/tests/test_data/airspace/france_airspace.txt",
+        "--output",
+        "saved_races/xc_flight.json"
+      ],
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "json race",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}/pygclib/bin/pygclib",
+      "args": [
+        "race",
+        "--task",
+        "pygclib/tests/test_data/tasks/pwca_task.json"
+      ],
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "convert aixm openair",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}/pygclib/bin/pygclib",
+      "args": [
+        "convert",
+        "--from_format",
+        "aixm",
+        "--to_format",
+        "openair",
+        "--input_file",
+        "dev_files/airspace_aixm.xml",
+        "--output_file",
+        "dev_files/airspace_openair.txt"
+      ],
+      "console": "integratedTerminal"
+    },
+    {
+      "type": "python",
+      "request": "launch",
+      "name": "current",
+      "program": "${file}"
+    }
+  ]
 }

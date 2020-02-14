@@ -2,12 +2,12 @@ import logging
 import os
 
 from aerofiles import openair
-from igclib.core import BaseObject
-from igclib.core.airspace import Airspace
-from igclib.core.flight import Flight
-from igclib.geography.elevation import elevation
-from igclib.geography.geo import Point
-from igclib.optimization.branchbound import compute_score
+from pygclib.core import BaseObject
+from pygclib.core.airspace import Airspace
+from pygclib.core.flight import Flight
+from pygclib.geography.elevation import elevation
+from pygclib.geography.geo import Point
+from pygclib.optimization.branchbound import compute_score
 from rtree.index import Index
 from shapely.geometry import LineString
 from tqdm import tqdm

@@ -7,7 +7,7 @@ from datetime import datetime
 import re
 import sys
 
-from igclib.constants import FLIGHT_PROVIDERS
+from pygclib.constants import FLIGHT_PROVIDERS
 
 
 class FlightCrawler():

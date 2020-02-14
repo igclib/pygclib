@@ -3,7 +3,7 @@ This module contains the base classes representing a GeoPoint, a Turnpoint and a
 It also provides convenience wrappers around C extension function calls.
 These wrappers allow for more concise function calls to improve readability.
 
-.. automodule:: igclib.geography.geo
+.. automodule:: pygclib.geography.geo
     :members:
 """
 

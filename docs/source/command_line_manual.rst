@@ -9,7 +9,7 @@ Usage
 
 ::
 
-    igclib COMMAND [OPTIONS] ARGS
+    pygclib COMMAND [OPTIONS] ARGS
 
 
 Commands

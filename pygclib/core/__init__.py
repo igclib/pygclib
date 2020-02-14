@@ -3,7 +3,7 @@ import logging
 import os
 import pickle
 
-from igclib.serialization.json_encoder import ComplexEncoder
+from pygclib.serialization.json_encoder import ComplexEncoder
 
 
 class BaseObject:

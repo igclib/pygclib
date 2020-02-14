@@ -17,7 +17,7 @@ sys.path.insert(0, os.path.abspath('../..'))
 
 # -- Project information -----------------------------------------------------
 
-project = 'igclib'
+project = 'pygclib'
 copyright = str(datetime.now().year) + ', Téo Bouvard'
 author = 'Téo Bouvard'
 

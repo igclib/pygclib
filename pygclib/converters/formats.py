@@ -2,8 +2,8 @@ import logging
 
 from lxml import etree
 from tqdm import tqdm
-from igclib.geography.converters import geo2deg, km2nm
-from igclib.constants import FILE_HEADERS
+from pygclib.geography.converters import geo2deg, km2nm
+from pygclib.constants import FILE_HEADERS
 
 
 class AIXMFormat:

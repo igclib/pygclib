@@ -6,8 +6,8 @@ from datetime import datetime
 import aiohttp
 import requests
 from bs4 import BeautifulSoup
-from igclib.constants import (DEFAULT_PROVIDER, MAX_TASKS_PER_EVENT, TASK_PROVIDERS)
-from igclib.core import BaseObject
+from pygclib.constants import (DEFAULT_PROVIDER, MAX_TASKS_PER_EVENT, TASK_PROVIDERS)
+from pygclib.core import BaseObject
 from tqdm import tqdm
 
 
@@ -99,6 +99,6 @@ class TaskCrawler(BaseObject):
 
 
 if __name__ == '__main__':
-    from igclib.crawlers.task_crawler import TaskCrawler
+    from pygclib.crawlers.task_crawler import TaskCrawler
     tc = TaskCrawler()
     tc.crawl()

@@ -3,11 +3,11 @@ import json
 import logging
 import os
 
-from igclib.core import BaseObject
-from igclib.geography import distance, heading
-from igclib.geography.optimizer import optimize
-from igclib.parsers import taskparse
-from igclib.time.timeop import next_second
+from pygclib.core import BaseObject
+from pygclib.geography import distance, heading
+from pygclib.geography.optimizer import optimize
+from pygclib.parsers import taskparse
+from pygclib.time.timeop import next_second
 
 
 class Task(BaseObject):
@@ -37,7 +37,7 @@ class Task(BaseObject):
                 task = json.load(f)
 
         # try to parse with every implemented format, raise if no match
-        for task_format in [taskparse.XCTask, taskparse.PWCATask, taskparse.RawTask, taskparse.IGCLIBTask]:
+        for task_format in [taskparse.XCTask, taskparse.PWCATask, taskparse.RawTask, taskparse.pygclibTask]:
             try:
                 task = task_format(task)
                 break

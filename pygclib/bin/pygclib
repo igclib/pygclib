@@ -4,12 +4,12 @@ import argparse
 import logging
 from datetime import datetime
 
-from igclib.constants import DEFAULT_PROVIDER, MIN_YEAR, TASK_PROVIDERS
-from igclib.core.race import Race
-from igclib.core.task import Task
-from igclib.core.xc import XC
-from igclib.crawlers.task_crawler import TaskCrawler
-from igclib.converters import Converter
+from pygclib.constants import DEFAULT_PROVIDER, MIN_YEAR, TASK_PROVIDERS
+from pygclib.core.race import Race
+from pygclib.core.task import Task
+from pygclib.core.xc import XC
+from pygclib.crawlers.task_crawler import TaskCrawler
+from pygclib.converters import Converter
 
 FORMAT = "%(levelname)s : %(message)s"
 logging.basicConfig(level=logging.INFO, format=FORMAT)
@@ -45,7 +45,7 @@ def check(args):
 
 
 def argument_parser():
-    parser = argparse.ArgumentParser(description='igclib command line tool')
+    parser = argparse.ArgumentParser(description='pygclib command line tool')
 
     commands = parser.add_subparsers(dest='command', help='Mode of operation')
     commands.required = True

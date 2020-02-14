@@ -1,4 +1,4 @@
 Race
 -----------------
-.. automodule:: igclib.core.race
+.. automodule:: pygclib.core.race
     :members:

@@ -5,9 +5,9 @@ This module provides optimizations for various objective methods.
 """
 
 import numpy as np
-from igclib.constants import OPTIMIZER_PRECISION
-from igclib.geography import destination, distance
-from igclib.geography.geo import Opti, Turnpoint
+from pygclib.constants import OPTIMIZER_PRECISION
+from pygclib.geography import destination, distance
+from pygclib.geography.geo import Opti, Turnpoint
 from scipy.optimize import minimize
 
 

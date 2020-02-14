@@ -1,7 +1,7 @@
-from igclib.constants import TOLERANCE
-from igclib.geography import distance, heading
+from pygclib.constants import TOLERANCE
+from pygclib.geography import distance, heading
 from shapely import geometry
-from igclib.core import BaseObject
+from pygclib.core import BaseObject
 
 
 class GeoPoint(BaseObject):

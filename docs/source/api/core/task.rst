@@ -1,4 +1,4 @@
 Task
 -----------------
-.. automodule:: igclib.core.task
+.. automodule:: pygclib.core.task
     :members:

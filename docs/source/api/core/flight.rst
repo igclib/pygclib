@@ -1,4 +1,4 @@
 Flight
 -----------------
-.. automodule:: igclib.core.flight
+.. automodule:: pygclib.core.flight
     :members:

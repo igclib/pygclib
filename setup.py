@@ -14,20 +14,20 @@ def readme():
         return f.read()
 
 
-geolib = Extension('geolib', ['igclib/geography/geodesic.c', 'igclib/geography/geolib.c'])
+geolib = Extension('geolib', ['pygclib/geography/geodesic.c', 'pygclib/geography/geolib.c'])
 
-setup(name='igclib',
+setup(name='pygclib',
       version=VERSION,
       description='A library for paragliding races',
       long_description=readme(),
-      url='https://github.com/teobouvard/igclib',
+      url='https://github.com/igclib/pygclib',
       author='Téo Bouvard',
       author_email='teobouvard@gmail.com',
       license='GPL-3',
-      packages=find_packages(include=['igclib']),
+      packages=find_packages(include=['pygclib']),
       ext_modules=[geolib],
       install_requires=requirements(),
-      scripts=['igclib/bin/igclib'],
+      scripts=['pygclib/bin/pygclib'],
       python_requires='>=3.5',
       classifiers=[
           'Intended Audience :: Developers',

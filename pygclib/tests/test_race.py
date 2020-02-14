@@ -2,8 +2,8 @@ import os
 from datetime import time
 
 import pytest
-from igclib.core.race import Race
-from igclib.tests import TEST_DATA
+from pygclib.core.race import Race
+from pygclib.tests import TEST_DATA
 
 
 @pytest.fixture(scope='session')

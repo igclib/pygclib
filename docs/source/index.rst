@@ -1,5 +1,5 @@
 ##################################
-Welcome to igclib's documentation
+Welcome to pygclib's documentation
 ##################################
 
 .. toctree::
